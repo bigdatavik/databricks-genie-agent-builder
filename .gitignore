@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Article drafting / authoring materials — not part of the shipped skill
+article
+prompt
+blog-genie-in-a-prompt.md
+*.draft.md
+
+# Local skill working copies (the canonical files live under skills/)
+/SKILL.md
+/references/
+
+# Editor / env noise
+.vscode/
+.idea/
+*.log
+.env
