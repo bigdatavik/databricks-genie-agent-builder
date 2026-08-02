@@ -4,7 +4,8 @@
 # Article drafting / authoring materials — not part of the shipped skill
 article
 prompt
-blog-genie-in-a-prompt.md
+blog-*.md
+blog-*.txt
 *.draft.md
 
 # Local skill working copies (the canonical files live under skills/)
