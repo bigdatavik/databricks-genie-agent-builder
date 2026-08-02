@@ -1,12 +1,12 @@
 # Databricks Genie Agent Builder
 
-A [Databricks Assistant](https://docs.databricks.com/aws/en/notebooks/databricks-assistant-faq) **User Skill** that builds a fully-configured AI/BI Genie Agent from a single prompt — curated schema, business-friendly views, a governed metric view, instructions, knowledge snippets, entity matching, synonyms, and benchmarks.
+A [Genie Code](https://docs.databricks.com/aws/en/genie-code/) **skill** that builds a fully-configured AI/BI Genie Agent from a single prompt — curated schema, business-friendly views, a governed metric view, instructions, knowledge snippets, entity matching, synonyms, and benchmarks.
 
 > **"Build a Genie Agent for HEDIS from `catalog_name.hedis_raw`."**
 >
 > …and ~90 seconds later you have a production-ready Genie Agent instead of a 10+ step manual checklist.
 
-> **Note on naming:** Databricks renamed **Genie spaces** to **Genie Agents** (June 2026). Some Assistant tool names still use the older `...Space` convention (e.g. `updateSpaceConfig`) — those are real API identifiers and are intentionally left unchanged in the skill.
+> **Note on naming:** Databricks renamed **Genie spaces** to **Genie Agents** (June 2026). Some Genie Code tool names still use the older `...Space` convention (e.g. `updateSpaceConfig`) — those are real API identifiers and are intentionally left unchanged in the skill.
 
 ## What's in this repo
 
@@ -20,11 +20,11 @@ databricks-genie-agent-builder/
             └── genie-meta-template.md      # 9-phase canonical template for agent design
 ```
 
-Everything the Assistant needs is the two files under `skills/genie-agent-builder/`. That directory maps 1:1 onto where the skill lives in your Databricks workspace.
+Everything Genie Code needs is the two files under `skills/genie-agent-builder/`. That directory maps 1:1 onto where the skill lives in your Databricks workspace.
 
 ## Installation
 
-The skill must live at this exact path in your workspace (the Assistant auto-discovers it):
+The skill must live at this exact path in your workspace (Genie Code auto-discovers it):
 
 ```text
 /Workspace/Users/<your-email>/.assistant/skills/genie-agent-builder/
@@ -69,13 +69,13 @@ print("Skill installed at:", dest)
 
 ### Verify
 
-Open Databricks Assistant and type:
+Open Genie Code and type:
 
 ```text
 Build a Genie Agent
 ```
 
-If the skill loaded, the Assistant replies with a structured template asking for **domain**, **source schema**, and **target schema**.
+If the skill loaded, Genie Code replies with a structured template asking for **domain**, **source schema**, and **target schema**.
 
 ## Usage
 
