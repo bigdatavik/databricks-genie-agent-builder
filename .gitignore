@@ -6,6 +6,7 @@ article
 prompt
 blog-*.md
 blog-*.txt
+linkedin-*.txt
 *.draft.md
 
 # Local skill working copies (the canonical files live under skills/)
