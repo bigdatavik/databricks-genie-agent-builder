@@ -5,11 +5,11 @@ description: Use this skill when the user wants to build, assess, or design a Da
 
 ## CRITICAL EXECUTION RULE
 
-When Genie space configuration tools are available (createAsset, addTablesToSpace, updateSpaceConfig, addStarterQuestions, addInstructionsToSpace, addKnowledgeSnippetsToSpace, updateTableDescription, configureEntityMatching, updateColumnSynonyms, addBenchmarks), you MUST execute the full build end-to-end using those tools. Do NOT present configuration as text recommendations. Do NOT stop after creating the space. Do NOT pause to summarize and ask permission to continue.
+When Genie Agent configuration tools are available (createAsset, addTablesToSpace, updateSpaceConfig, addStarterQuestions, addInstructionsToSpace, addKnowledgeSnippetsToSpace, updateTableDescription, configureEntityMatching, updateColumnSynonyms, addBenchmarks), you MUST execute the full build end-to-end using those tools. Do NOT present configuration as text recommendations. Do NOT stop after creating the Genie Agent. Do NOT pause to summarize and ask permission to continue.
 
 "Build a Genie Agent" = execute all of these in one continuous pass:
 1. executeCode — create schema (if needed) and curated SQL objects (views, metric views)
-2. createAsset (genie) — create the Genie space WITH tableIdentifiers pointing to the curated objects
+2. createAsset (genie) — create the Genie Agent WITH tableIdentifiers pointing to the curated objects
 3. updateSpaceConfig — set description with business rules, glossary, scope boundaries
 4. addStarterQuestions — add 6-10 clickable prompts
 5. addInstructionsToSpace — glossary (text) + 5-8 SQL examples (sql_example)
@@ -35,7 +35,7 @@ When the user provides a short trigger phrase without full details (e.g. "create
 **Copy and fill in this prompt:**
 
 ```
-Build a Genie Agent for [DOMAIN]. Source schema: `[catalog.schema]`. Create curated views and a metric view in `[catalog.curated_schema]` (create the schema if needed). Execute the full build — schema, views, Genie space with tables attached, space config, starter questions, glossary, SQL examples, knowledge snippets (joins, filters, measures, derived columns), table descriptions, entity matching, column synonyms, and benchmarks. Do not stop or summarize mid-build.
+Build a Genie Agent for [DOMAIN]. Source schema: `[catalog.schema]`. Create curated views and a metric view in `[catalog.curated_schema]` (create the schema if needed). Execute the full build — schema, views, Genie Agent with tables attached, space config, starter questions, glossary, SQL examples, knowledge snippets (joins, filters, measures, derived columns), table descriptions, entity matching, column synonyms, and benchmarks. Do not stop or summarize mid-build.
 ```
 
 ---
@@ -315,12 +315,12 @@ Depending on the user’s request, return one or more of:
 
 ### Step 10 — Execute configuration with tools
 
-When operating inside a Genie space authoring context with access to Genie
+When operating inside a Genie Agent authoring context with access to Genie
 configuration tools, DO NOT present the configuration as recommendations or
 paste-ready text. Execute it directly using the available tools in this order:
 
 1. Create curated SQL objects (views, metric views) via executeCode
-2. Create the Genie space via createAsset (type: genie) with curated table identifiers
+2. Create the Genie Agent via createAsset (type: genie) with curated table identifiers
 3. updateSpaceConfig — set display name, description with business rules, glossary, scope
 4. addStarterQuestions — add 6-10 clickable home-screen prompts
 5. addInstructionsToSpace — add glossary (text) + 5-8 example SQL queries (sql_example)
@@ -331,7 +331,7 @@ paste-ready text. Execute it directly using the available tools in this order:
 10. addBenchmarks — add 10-15 benchmark questions with expected SQL answers
 
 Execution rules:
-- Do not stop after creating the space. Complete all 10 steps in one continuous pass.
+- Do not stop after creating the Genie Agent. Complete all 10 steps in one continuous pass.
 - Do not pause to present a summary and ask if the user wants to continue.
 - "Build" means build — not plan, not recommend, not list.
 - If a tool is unavailable, fall back to producing paste-ready content as in Step 8.

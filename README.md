@@ -1,10 +1,12 @@
 # Databricks Genie Agent Builder
 
-A [Databricks Assistant](https://docs.databricks.com/aws/en/notebooks/databricks-assistant-faq) **User Skill** that builds a fully-configured AI/BI Genie space from a single prompt — curated schema, business-friendly views, a governed metric view, instructions, knowledge snippets, entity matching, synonyms, and benchmarks.
+A [Databricks Assistant](https://docs.databricks.com/aws/en/notebooks/databricks-assistant-faq) **User Skill** that builds a fully-configured AI/BI Genie Agent from a single prompt — curated schema, business-friendly views, a governed metric view, instructions, knowledge snippets, entity matching, synonyms, and benchmarks.
 
 > **"Build a Genie Agent for HEDIS from `humana_payer.hedis_raw`."**
 >
-> …and ~90 seconds later you have a production-ready Genie space instead of a 10+ step manual checklist.
+> …and ~90 seconds later you have a production-ready Genie Agent instead of a 10+ step manual checklist.
+
+> **Note on naming:** Databricks renamed **Genie spaces** to **Genie Agents** (June 2026). Some Assistant tool names still use the older `...Space` convention (e.g. `updateSpaceConfig`) — those are real API identifiers and are intentionally left unchanged in the skill.
 
 ## What's in this repo
 
@@ -86,7 +88,7 @@ Target schema: humana_payer.hedis_curated
 Focus: member compliance, care gaps, provider performance, Star Ratings.
 ```
 
-The skill will inspect the source tables, design a curated layer, create the Genie space, and configure instructions, knowledge snippets, entity matching, synonyms, and benchmarks — end to end.
+The skill will inspect the source tables, design a curated layer, create the Genie Agent, and configure instructions, knowledge snippets, entity matching, synonyms, and benchmarks — end to end.
 
 ## Customizing
 
