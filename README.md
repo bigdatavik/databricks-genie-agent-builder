@@ -2,7 +2,7 @@
 
 A [Databricks Assistant](https://docs.databricks.com/aws/en/notebooks/databricks-assistant-faq) **User Skill** that builds a fully-configured AI/BI Genie Agent from a single prompt — curated schema, business-friendly views, a governed metric view, instructions, knowledge snippets, entity matching, synonyms, and benchmarks.
 
-> **"Build a Genie Agent for HEDIS from `humana_payer.hedis_raw`."**
+> **"Build a Genie Agent for HEDIS from `catalog_name.hedis_raw`."**
 >
 > …and ~90 seconds later you have a production-ready Genie Agent instead of a 10+ step manual checklist.
 
@@ -83,8 +83,8 @@ If the skill loaded, the Assistant replies with a structured template asking for
 
 ```text
 Build a Genie Agent for HEDIS quality analytics.
-Source schema: humana_payer.hedis_raw
-Target schema: humana_payer.hedis_curated
+Source schema: catalog_name.hedis_raw
+Target schema: catalog_name.hedis_curated
 Focus: member compliance, care gaps, provider performance, Star Ratings.
 ```
 
